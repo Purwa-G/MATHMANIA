@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MathMania</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+  crossorigin="anonymous"
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Floating Equations -->
+  <div id="floating-equations"></div>
+
+  <!-- Main Start Screen -->
+  <div id="main-start-screen" class="container">
+    <h1 class="display-2">MathMania</h1>
+    <br>
+    <h3>"𝙔𝙤𝙪𝙧 𝙥𝙖𝙩𝙝 𝙩𝙤 𝙣𝙪𝙢𝙚𝙧𝙞𝙘𝙖𝙡 𝙚𝙭𝙘𝙚𝙡𝙡𝙚𝙣𝙘𝙚"</h3>
+    <button type="button"class="btn btn-primary btn-lg" onclick="goToDifficultyScreen()">Play</button>
+  </div>
+
+  <!-- Difficulty Selector Screen -->
+  <div id="start-screen" class="container hidden">
+   
+    <h1 class="text-primary"></h1>
+    <div><h3><p>Select Difficulty:</p></h3></div>
+    <button type="button" class="btn btn-primary btn-lg" onclick="startGame('easy')">Easy</button>
+    <button type="button" class="btn btn-primary btn-lg" onclick="startGame('medium')">Medium</button>
+    <button type="button" class="btn btn-primary btn-lg" onclick="startGame('hard')">Hard</button>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="game-screen" class="container text-center py-5 hidden">
+   
+    <div id="score" class="display-5">Score: 0</div>
+    <hr>
+    <h2><p id="question"  class="display-6">Loading...</p></h2>
+    <input type="text" id="answer" class="form-control w-50 mx-auto my-4" placeholder="Enter your answer">
+    <div class="d-flex justify-content-center gap-3">
+      <button  class="btn btn-primary btn-lg" onclick="checkAnswer()">Next</button>
+      <button  class="btn btn-primary btn-lg" onclick="quitGame()">Quit</button>
+    </div>
+    <div id="result" class="fs-4 mt-3"></div>
+  </div>
+  </div>
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
